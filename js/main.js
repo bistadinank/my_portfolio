@@ -5,7 +5,7 @@ import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer
 // Hero — Neural Network (WebGL)
 // =============================================
 const PARTICLE_COUNT  = 60;
-const CONNECTION_DIST = 3.2;
+const CONNECTION_DIST = 2.2;
 const SPEED           = 0.004;
 
 function initHeroCanvas() {
