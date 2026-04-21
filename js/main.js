@@ -4,7 +4,7 @@ import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer
 // =============================================
 // Hero — Neural Network (WebGL)
 // =============================================
-const PARTICLE_COUNT  = 100;
+const PARTICLE_COUNT  = 60;
 const CONNECTION_DIST = 3.2;
 const SPEED           = 0.004;
 
@@ -46,7 +46,7 @@ function initHeroCanvas() {
   lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3));
   lineGeo.setAttribute('color',    new THREE.BufferAttribute(lineColor, 3));
   scene.add(new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({
-    vertexColors: true, transparent: true, opacity: 0.8,
+    vertexColors: true, transparent: true, opacity: 0.65,
   })));
 
   let mx = 0, my = 0;
@@ -83,7 +83,7 @@ function initHeroCanvas() {
         const dx = pos[i*3]-pos[j*3], dy = pos[i*3+1]-pos[j*3+1], dz = pos[i*3+2]-pos[j*3+2];
         const d  = Math.sqrt(dx*dx + dy*dy + dz*dz);
         if (d < CONNECTION_DIST) {
-          const a = (1 - d / CONNECTION_DIST) * 0.75, b = li * 6;
+          const a = (1 - d / CONNECTION_DIST) * 0.55, b = li * 6;
           linePos[b]=pos[i*3]; linePos[b+1]=pos[i*3+1]; linePos[b+2]=pos[i*3+2];
           linePos[b+3]=pos[j*3]; linePos[b+4]=pos[j*3+1]; linePos[b+5]=pos[j*3+2];
           lineColor[b]=lineColor[b+1]=lineColor[b+2]=a;
