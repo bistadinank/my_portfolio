@@ -182,7 +182,7 @@ function initProjectCarousel() {
   const STEP = (Math.PI * 2) / n;
   const TAU  = Math.PI * 2;
   const AUTO_ROTATE_SPEED = 0.005;
-  const HOVER_ROTATE_SPEED = 0.0008;
+  const HOVER_ROTATE_SPEED = 0.0018;
 
   function getRadius() { return Math.max(container.clientWidth * 0.42, 520); }
 
