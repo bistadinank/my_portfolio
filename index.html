@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinank Bista — PhD Researcher & Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/png" href="images/icon.png" />
+  <link rel="apple-touch-icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <!-- Full-page distortion mesh (WebGL) -->
+  <canvas id="distortion-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Dinank Bista home">
+        <img src="images/icon.png" alt="" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content reveal">
+      <span class="hero-badge">PhD Researcher &nbsp;·&nbsp; AI & Software Engineer</span>
+      <h1 class="hero-name">Dinank Bista</h1>
+      <p class="hero-sub">Human-Centered Computing &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Human-AI Collaboration</p>
+      <p class="hero-desc">
+        I am passionate about engineering, AI, and software development.
+        As a PhD candidate at the University of Florida, I build intelligent systems that connect research ideas with real-world impact.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-outline">See Projects</a>
+        <a href="#skills" class="btn btn-outline">Skills Showcase</a>
+        <a href="#research" class="btn btn-outline">Research</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/dinankbista" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <span>·</span>
+        <a href="https://github.com/bistadinank" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <span>·</span>
+        <a href="mailto:bista.dinank@gmail.com">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+      </div>
+      <p class="hero-mode-hint">Want to switch modes? Hover over my image in the next section.</p>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">About</span>
+        <h2>Building the Bridge Between Humans and AI</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="photo-frame" tabindex="0" aria-label="Theme toggle">
+            <div class="photo-flip-inner">
+              <div class="photo-face photo-front">
+                <img src="images/photo.png" alt="Dinank Bista" onerror="this.closest('.photo-frame').classList.add('photo-missing')" />
+                <div class="photo-placeholder"><i class="fa-solid fa-user"></i></div>
+              </div>
+              <div class="photo-face photo-back">
+                <span class="theme-question">Toggle colors?</span>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+                  <span class="theme-toggle-text">Dark theme</span>
+                  <span class="theme-toggle-track"><span></span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="photo-socials">
+            <a href="https://www.linkedin.com/in/dinankbista" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/bistadinank" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:bista.dinank@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <p>
+            I'm a PhD student in <strong>Human-Centered Computing</strong> at the University of Florida (INIT Lab),
+            researching how people interact with AI — from image annotation interfaces to context-aware mHealth systems.
+          </p>
+          <p>
+            I combine deep ML expertise with 3+ years of industry engineering experience, having shipped AI-powered products to <em>400K+ users</em> —
+            from a COVID-19 vaccination platform across Seattle to enterprise CRM systems.
+          </p>
+
+          <div class="about-edu">
+            <div class="edu-item">
+              <span class="edu-degree">PhD, Human Centered Computing</span>
+              <span class="edu-school">University of Florida &nbsp;·&nbsp; Expected 2027 &nbsp;·&nbsp; GPA 3.90</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-degree">MS, Computer Science</span>
+              <span class="edu-school">University of Florida &nbsp;·&nbsp; May 2025 &nbsp;·&nbsp; GPA 3.90</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-degree">BS, Computer Engineering</span>
+              <span class="edu-school">Kathmandu University &nbsp;·&nbsp; Nov 2019</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Publications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">Well</span>
+              <span class="stat-label">Experienced</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">3.90</span>
+              <span class="stat-label">PhD GPA</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">400K+</span>
+              <span class="stat-label">Users Impacted</span>
+            </div>
+          </div>
+
+          <div class="cert-list">
+            <h4>Certifications</h4>
+            <div class="cert-item">
+              <i class="fa-brands fa-google cert-icon-fa"></i>
+              <div>
+                <span class="cert-name">Google TensorFlow Developer</span>
+                <span class="cert-year">2023</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <i class="fa-solid fa-microchip cert-icon-fa"></i>
+              <div>
+                <span class="cert-name">DeepLearning.AI Prompt Engineering</span>
+                <span class="cert-year">2024</span>
+              </div>
+            </div>
+            <div class="cert-item">
+              <i class="fa-solid fa-users cert-icon-fa"></i>
+              <div>
+                <span class="cert-name">Human-Centered Design for AI (UXPA)</span>
+                <span class="cert-year">2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Experience</span>
+        <h2>Where I've Worked</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Graduate Research Assistant</h3>
+                <p class="timeline-company">INIT Lab · University of Florida · Gainesville, FL</p>
+              </div>
+              <span class="timeline-period">Aug 2022 – Present</span>
+            </div>
+            <ul>
+              <li>Researching human-centered approaches to image annotation for supervised ML data quality.</li>
+              <li>4-week in-the-wild study (n=30) on contextual vs. time-based notifications — reduced response time by 33%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer II</h3>
+                <p class="timeline-company">FuseMachines · Kathmandu, Nepal</p>
+              </div>
+              <span class="timeline-period">Sep 2021 – Aug 2022</span>
+            </div>
+            <ul>
+              <li>Full-stack CRM for Enhatch (React/Next.js, AWS Lambda, Node.js, DynamoDB) — 45% faster load, 80% process automation.</li>
+              <li>Optimized 32+ API endpoints — reduced average response time by 38%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="timeline-company">Leapfrog Technologies · Kathmandu, Nepal</p>
+              </div>
+              <span class="timeline-period">Nov 2019 – Sep 2021</span>
+            </div>
+            <ul>
+              <li>Managed Vaccination System serving 400K+ patients across 30+ Seattle clinics — cut manual processing by 60%.</li>
+              <li>Redesigned Hopelink's CRM (React, Node.js, Power Platform) — reduced manual entry by 70%.</li>
+              <li>Data migration using Node.js, C#, MS SQL — 40% less redundancy, 30% faster queries.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineering Intern</h3>
+                <p class="timeline-company">Leapfrog Technologies · Kathmandu, Nepal</p>
+              </div>
+              <span class="timeline-period">Jul – Oct 2019</span>
+            </div>
+            <ul>
+              <li>Built a tower defense game in Vanilla JS with custom goal-based pathfinding.</li>
+              <li>Contributed frontend modules and UI widgets used across client applications.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Projects</span>
+        <h2>Things I've Built</h2>
+      </div>
+
+      <!-- 3D Carousel — Three.js CSS3DRenderer -->
+      <div class="carousel-wrapper reveal">
+        <div id="carousel-container"></div>
+        <div class="carousel-controls">
+          <button id="carousel-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+          <div id="carousel-dots"></div>
+          <button id="carousel-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Skills</span>
+        <h2>Technical Toolkit</h2>
+      </div>
+
+      <!-- 3D Skill Sphere — Three.js CSS3DRenderer -->
+      <div id="skills-sphere" class="skills-sphere-container reveal"></div>
+      <p class="sphere-hint reveal"><i class="fa-solid fa-hand-pointer"></i> Hover to interact</p>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <canvas id="research-canvas"></canvas>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Research</span>
+        <h2>Selected Publications</h2>
+      </div>
+
+      <div class="pub-list">
+
+        <div class="pub-card reveal">
+          <button class="pub-close" type="button" aria-label="Close publication card">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="pub-meta">
+            <span class="pub-venue">CHI '24</span>
+            <span class="pub-year">2024</span>
+          </div>
+          <div class="pub-body">
+            <h3>Investigating Contextual Notifications to Drive Self-Monitoring in mHealth Apps</h3>
+            <p class="pub-authors">Chen, Yu-Peng; Woodward, Julia; <strong>Bista, Dinank</strong>; et al.</p>
+            <a href="https://doi.org/10.1145/3613904.3641993" target="_blank" rel="noopener" class="pub-doi">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> DOI: 10.1145/3613904.3641993
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-card reveal">
+          <button class="pub-close" type="button" aria-label="Close publication card">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="pub-meta">
+            <span class="pub-venue">Frontiers</span>
+            <span class="pub-year">2024</span>
+          </div>
+          <div class="pub-body">
+            <h3>MyTrack+: Human-Centered Design of an mHealth App</h3>
+            <p class="pub-authors">Chen, Yu-Peng; Woodward, Julia; Shankar, MeenaN.; <strong>Bista, Dinank</strong>; et al.</p>
+            <a href="https://doi.org/10.3389/fdgth.2024.1334058" target="_blank" rel="noopener" class="pub-doi">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> DOI: 10.3389/fdgth.2024.1334058
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-card reveal">
+          <button class="pub-close" type="button" aria-label="Close publication card">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="pub-meta">
+            <span class="pub-venue">IEEE Access</span>
+            <span class="pub-year">2025</span>
+          </div>
+          <div class="pub-body">
+            <h3>'Over Time Everyone's Gonna Be Open To It': User Attitudes Towards Security and Privacy in Continuous Authentication for Smart Homes</h3>
+            <p class="pub-authors">Wang, Heting; Chen, Yu-Peng; <strong>Bista, Dinank</strong>; Calvo, Rodrigo; et al.</p>
+            <a href="https://doi.org/10.1109/ACCESS.2025.1234567" target="_blank" rel="noopener" class="pub-doi">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> DOI: 10.1109/ACCESS.2025.1234567
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <p class="research-hint">
+        <span class="research-hint-desktop">Click highlighted planets for research papers: Venus, Earth, or Saturn.</span>
+        <span class="research-hint-mobile">Research papers are listed above. Desktop view offers a solar system interaction for this section.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <canvas id="contact-canvas"></canvas>
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;">
+        <span class="section-label">Contact</span>
+        <h2>Let's Connect</h2>
+      </div>
+
+      <div class="contact-content reveal">
+        <p>Open to research collaborations and engineering roles — AI Engineer, ML Engineer, or Software Engineer.</p>
+        <div class="contact-links">
+          <a href="mailto:bista.dinank@gmail.com" class="contact-link">
+            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">bista.dinank@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/dinankbista" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/dinankbista</span>
+            </div>
+          </a>
+          <a href="https://github.com/bistadinank" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/bistadinank</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          <span>Copyright 2026@dinankbista</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/dinankbista" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/bistadinank" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:bista.dinank@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
