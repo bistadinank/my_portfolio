@@ -162,15 +162,6 @@ const PROJECTS = [
     link: 'https://danebista.github.io/JS-Experiements/Assignment-4.flappy-bird/index.html',
     linkText: 'Play Now',
   },
-  {
-    icon: 'fa-car', num: '07',
-    img: 'images/6.png',
-    title: 'Car Race',
-    desc: 'Top-down racer with lane logic, speed progression, and obstacle avoidance — real-time game loop in the browser.',
-    tags: ['Vanilla JS', 'Canvas API', 'Game Loop'],
-    link: 'https://danebista.github.io/JS-Experiements/Assignment3.car-race/index.html',
-    linkText: 'Play Now',
-  },
 ];
 
 function initProjectCarousel() {

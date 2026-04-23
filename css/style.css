@@ -1767,11 +1767,18 @@ body.dark-theme #contact {
 }
 
 .contact-links {
-  gap: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .contact-link {
   position: relative;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
   gap: 12px;
   padding: 10px 0 14px;
   text-align: left;
@@ -1842,6 +1849,7 @@ body.dark-theme #contact {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 
 .contact-link--cta {
